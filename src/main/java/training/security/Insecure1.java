@@ -23,8 +23,10 @@ public class Insecure1 {
     String user = request1.getParameter("user");
 	String test1 = "Adding stuff here too!";
     String query2 = "SELECT userid FROM users WHERE username = '" + user  + "'";
-    Statement statement = connection.createStatement();
-    ResultSet resultSet = statement.executeQuery(query2);
-    return resultSet.getString(0);
+    Statement statement2 = connection.createStatement();
+    ResultSet resultSet2 = statement2.executeQuery(
+		query2
+	);
+    return resultSet2.getString(0);
   }
 }
